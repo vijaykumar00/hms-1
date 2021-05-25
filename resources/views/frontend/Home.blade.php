@@ -69,6 +69,7 @@
             </div>
             <div class="food-menu-tabs" data-aos="fade">
                 <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
+               
                     @foreach ($food_category as $fc)
                         <li class="nav-item">
                             <a class="nav-link @if ($fc->id == 1) active @endif letter-spacing-2" id="{{ $fc->name }}-tab" data-toggle="tab"
@@ -78,7 +79,6 @@
                     @endforeach
                 </ul>
                 <div class="tab-content py-5" id="myTabContent">
-
                     @foreach ($food_category as $fc)
                         <?php $i = 1; ?>
                         <div class="tab-pane fade @if ($fc->id == 1) show active @endif text-left" id={{ $fc->name }} role="tabpanel"

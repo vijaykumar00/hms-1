@@ -240,15 +240,15 @@
                 </div>
                 <div class="col-md-5">
                     <div class="right border">
-                        <div class="header">Order Summary</div>
-                        <p>2 items</p>
+                        <div class="header">Booking</div>
+                        <p>Single Room</p>
                         <div class="row item">
                             <div class="col-4 align-self-center"><img class="img-fluid"
                                     src="https://i.imgur.com/79M6pU0.png"></div>
                             <div class="col-8">
                                 <div class="row"><b>$ 26.99</b></div>
-                                <div class="row text-muted">Be Legandary Lipstick-Nude rose</div>
-                                <div class="row">Qty:1</div>
+                                <div class="row text-muted">Room </div>
+                                <div class="row">1</div>
                             </div>
                         </div>
                         <hr>

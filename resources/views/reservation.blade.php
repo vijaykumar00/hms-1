@@ -116,7 +116,7 @@
                                         <label>Type Of Room <span class="required">*</span></label>
                                         <select name="troom" id="troom" class="form-control" required>
                                             <option value selected></option>
-                                            @foreach ($categories as $categoriesvalue)
+                                            @foreach ( $categories as $categoriesvalue)
                                                 <option value="{{ $categoriesvalue->id }}">
                                                     {{ $categoriesvalue->name }}
                                                 </option>

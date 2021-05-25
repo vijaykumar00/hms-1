@@ -17,6 +17,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\SlideController;
+use App\Http\Controllers\FoodController;
 use App\Models\room_Category;
 use App\Models\reservation;
 use App\Models\room;
@@ -46,7 +47,7 @@ use Illuminate\Support\Facades\DB;
 Auth::routes();
 
 
-Route::get('/', [PageController::class, 'Home']);
+Route::get('/',  [PageController::class, 'Home']);
 Route::get('/about', [PageController::class, 'About']);
 Route::get('/event', [PageController::class, 'Event']);
 Route::get('/rooms', [PageController::class, 'Rooms']);
@@ -78,6 +79,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::view('dashboard', 'admin.home')->name('admin.home');
         Route::post('logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('admin.logout');
     });
+    Route::get('food/list',[FoodController::class,'getFood']);
+    Route::get('food/add',[FoodController::class,'add']);
+    Route::post('food/addpost',[FoodController::class,'AddPost']);
 });
 
 //route for add room category
@@ -90,6 +94,7 @@ Route::get('/delete/{id}', [RoomCategoryController::class, 'delete']);
 Route::get('/Edit/{id}', [RoomCategoryController::class, 'ShowEditCategory']);
 Route::post('/EditRoom/{id}', [RoomCategoryController::class, 'EditCategory']);
 
+
 // route for add room
 Route::get('/addrRoom', function () {
     $categoryRoom = room_Category::all();
@@ -100,6 +105,7 @@ Route::get('/Listofroom', [roomController::class, 'room_list'])->name('admin.roo
 Route::get('/deleteRoom/{id}', [roomController::class, 'delete']);
 Route::get('/edit/{id}', [roomController::class, 'ShowEditRoom']);
 Route::post('/editRoom/{id}', [roomController::class, 'EditRoom']);
+
 
 
 

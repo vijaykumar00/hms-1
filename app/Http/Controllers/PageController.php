@@ -18,7 +18,7 @@ class PageController extends Controller
 
     public function Home()
     {
-        $food_category = CategoryFood::all();
+        $food_category = CategoryFood::with('getFood')->get();
         $category = room_Category::all();
         $category = room_Category::all();
         $review = Review::all();

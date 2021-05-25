@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //room categroy
+        // room categroy
         View::share('key', 'value');
         Schema::defaultStringLength(191);
 
